@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A quiet place to organize your day. Create, edit and complete your to-do list.">
+  <title>Done — Your to-do list</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%231a43dc'/%3E%3Cpath d='m10 20 7 7 14-15' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">✓</span> done<span class="brand-dot">.</span></a><span class="header-note">A little progress, every day.</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow" id="date"></p><h1>Make room for<br>what matters<span>.</span></h1><p>Your day, one task at a time.</p></section>
+    <section class="workspace" aria-label="Your to-do list">
+      <div class="list-heading"><h2>My tasks</h2><span id="count" aria-live="polite"></span></div>
+      <form id="add-form"><label class="sr-only" for="task-input">New task</label><input id="task-input" placeholder="What would you like to get done?" maxlength="240" autocomplete="off" required><button class="primary" type="submit"><span aria-hidden="true">＋</span> Add task</button></form>
+      <div class="toolbar"><div class="filters" role="group" aria-label="Filter tasks"><button data-filter="all" aria-pressed="true">All</button><button data-filter="active" aria-pressed="false">Active</button><button data-filter="completed" aria-pressed="false">Completed</button></div><button id="clear" class="quiet" hidden>Clear completed</button></div>
+      <ul id="tasks"></ul><div id="empty"><span class="empty-icon" aria-hidden="true">✓</span><h3>A fresh start.</h3><p>Add your first task and take it from there.</p></div>
+      <div class="progress-footer"><span id="progress-text">Ready when you are.</span><progress id="progress" max="1" value="0" aria-label="Completed tasks"></progress></div>
+    </section>
+    <p class="storage-note">Saved in this browser · Just for you</p><p id="status" role="status"></p>
+  </main>
+  <footer>Less on your mind. More in your day.</footer>
+</body>
+</html>
